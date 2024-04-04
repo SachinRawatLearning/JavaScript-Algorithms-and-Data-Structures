@@ -10,6 +10,7 @@ const same = (arr1, arr2) => {
   let frequencyCounter1 = {};
   let frequencyCounter2 = {};
 
+  //Store key value pairs with key as char and value as count
   for (const key of arr1) {
     frequencyCounter1[key] = (frequencyCounter1[key] || 0) + 1;
   }
@@ -18,8 +19,7 @@ const same = (arr1, arr2) => {
     frequencyCounter2[key] = (frequencyCounter2[key] || 0) + 1;
   }
 
-  console.log(frequencyCounter1, frequencyCounter2);
-
+  //Compare both Objects
   for (const [key, value] of Object.entries(frequencyCounter1)) {
     if (!frequencyCounter2.hasOwnProperty(key ** 2)) return false;
     if (frequencyCounter2[key ** 2] !== value) return false;

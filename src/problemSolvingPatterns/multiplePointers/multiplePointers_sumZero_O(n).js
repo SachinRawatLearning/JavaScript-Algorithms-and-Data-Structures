@@ -7,11 +7,13 @@
 const sumZero = (arr) => {
   if (!Array.isArray(arr) || arr.length === 0) return undefined;
 
+  //Take two pointer, one from start and one from end
   let left = 0;
   let right = arr.length - 1;
 
   while (arr[right] > arr[left]) {
     if (arr[left] + arr[right] === 0) return [arr[left], arr[right]];
+    //If arr[left]< arr[right], that means left should be increased as in sorted array, we will have greater number to the right
     else if (arr[left] - arr[right] < 0) left++;
     else right--;
   }
