@@ -22,3 +22,19 @@ Very useful for keeping track of a subset of data in an array/string etc.
 
 This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data.
 This pattern can tremendously decrease time complexity
+
+Sorting Algorithms:
+
+1. Bubble Sort
+
+Largest elements bubbles up to the last.
+Swaps at every step
+
+2. Selection Sort
+
+We select the minimum in whole array and put it in the first.
+we compare and only make one swap at end of each loop
+
+3. Insertion Sort
+
+We insert the elements to the sorted left portion
