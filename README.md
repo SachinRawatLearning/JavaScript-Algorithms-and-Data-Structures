@@ -38,3 +38,7 @@ we compare and only make one swap at end of each loop
 3. Insertion Sort
 
 We insert the elements to the sorted left portion
+
+4. Merge Sort
+
+First we divide the array to the individual elements and then merge them back
