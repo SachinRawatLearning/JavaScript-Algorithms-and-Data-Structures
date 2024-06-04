@@ -121,7 +121,25 @@ class SinglyLinkedList {
     console.log(arr, this.length);
   }
 
-  reverse() {}
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+
+    //as tail points to null
+    let prev = null;
+    let next;
+
+    for (let i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+
+      // update variables for next run
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
 }
 
 const obj = new SinglyLinkedList();
@@ -136,4 +154,6 @@ obj.set(23, 0);
 obj.insert(99, 2);
 // console.log(obj);
 // console.log(obj.remove(1));
+obj.print();
+obj.reverse();
 obj.print();

@@ -42,3 +42,14 @@ We insert the elements to the sorted left portion
 4. Merge Sort
 
 First we divide the array to the individual elements and then merge them back
+
+Data Structures:
+
+1. Singly Linked List
+
+Big O ->
+
+- Insertion : O(1)
+- Removal : O(1) -> Begining or O(n) -> End
+- Searching : O(n)
+- Access : O(n)
