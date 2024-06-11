@@ -53,3 +53,38 @@ Big O ->
 - Removal : O(1) -> Begining or O(n) -> End
 - Searching : O(n)
 - Access : O(n)
+
+2. Doubly Linked List
+
+Big O ->
+
+- Insertion : O(1)
+- Removal : O(1)
+- Searching : O(n) Technically O(n/2) but that's still O(n)
+- Access : O(n)
+
+3. Stack ->
+
+- Using Arrays: Better to use push/pop as unshift/shift will cause re-indexing.
+
+- Using Linked List: Better to use unshift/shift as pop in linked list in O(n)
+
+Big O ->
+
+- Insertion : O(1)
+- Removal : O(1)
+- Searching : O(n)
+- Access : O(n)
+
+4. Queue ->
+
+- Using Arrays: Have to reindex on both unshift/pop and push/shift, so linked list is preferred.
+
+- Using Linked List: Better to Remove from begining (shift) and add to end(push)
+
+Big O ->
+
+- Insertion : O(1)
+- Removal : O(1)
+- Searching : O(n)
+- Access : O(n)
