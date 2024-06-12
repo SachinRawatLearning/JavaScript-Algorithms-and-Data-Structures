@@ -88,3 +88,16 @@ Big O ->
 - Removal : O(1)
 - Searching : O(n)
 - Access : O(n)
+
+
+5. Tree ->
+
+- Binary Tree ->
+    - Each node can have at most two children
+
+        - Binary Search Tree (BST) ->
+            - Sorted in a particular way(order)
+            Like :
+            - Every item on left of root is less than root
+            - Every item on right of root is greater than root
+            - Can repeat that on each child node
