@@ -14,7 +14,7 @@ const sumZero = (arr) => {
   while (arr[right] > arr[left]) {
     if (arr[left] + arr[right] === 0) return [arr[left], arr[right]];
     //If arr[left]< arr[right], that means left should be increased as in sorted array, we will have greater number to the right
-    else if (arr[left] - arr[right] < 0) left++;
+    else if (arr[left] + arr[right] < 0) left++;
     else right--;
   }
 };
