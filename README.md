@@ -101,3 +101,18 @@ Big O ->
             - Every item on left of root is less than root
             - Every item on right of root is greater than root
             - Can repeat that on each child node
+
+
+6. Tree Traversal ->
+
+    - BFS
+    - DFS
+        - PreOrder: visit parent, then left side of parent and then right side (can be used if we are trying to duplicate/clone a tree as its easily reconstructed).
+        - PostOrder: visit left side of parent, then right side of parent, then the parent node.
+        - InOrder: visit left side of parent, then parent, then right side of parent (used commonly in bst as we can get nodes values in ascending order).
+
+    - BFS vs DFS ->
+        - Depends on Tree
+            - Generally, time complexity remains same in both case, as each node is visited once.
+            - If tree is wide (lot of nodes), then DFS is preferred, as space we take up in process will be less in DFS.
+            - If tree is one sided (like each node on right or left side), then BFS is preferred, as space taken will be less and depth will be more.
