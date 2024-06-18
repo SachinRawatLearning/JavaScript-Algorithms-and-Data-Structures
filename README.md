@@ -116,3 +116,11 @@ Big O ->
             - Generally, time complexity remains same in both case, as each node is visited once.
             - If tree is wide (lot of nodes), then DFS is preferred, as space we take up in process will be less in DFS.
             - If tree is one sided (like each node on right or left side), then BFS is preferred, as space taken will be less and depth will be more.
+
+
+7. Binary Heaps ->
+
+    - Another Category of Trees
+    - Used to implement Priorty Queues
+    - Max Binary Heap : Like BST but parent nodes are always larger than child nodes.
+    - Min Binary Heap : Like BST but parent nodes are always smaller than child nodes.
