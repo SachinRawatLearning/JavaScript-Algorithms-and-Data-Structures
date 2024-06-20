@@ -122,5 +122,9 @@ Big O ->
 
     - Another Category of Trees
     - Used to implement Priorty Queues
-    - Max Binary Heap : Like BST but parent nodes are always larger than child nodes.
-    - Min Binary Heap : Like BST but parent nodes are always smaller than child nodes.
+    - Each node can have at most 2 children
+    - The left child comes before the right child
+        - Max Binary Heap : Like BST but parent nodes are always larger than child nodes.
+        - Min Binary Heap : Like BST but parent nodes are always smaller than child nodes.
+        - Find parent of a child node -> (n-1)/2
+        - Find left and right child of parent node -> 2n+1, 2n+2
