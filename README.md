@@ -107,9 +107,9 @@ Big O ->
 
     - BFS
     - DFS
-        - PreOrder: visit parent, then left side of parent and then right side (can be used if we are trying to duplicate/clone a tree as its easily reconstructed).
-        - PostOrder: visit left side of parent, then right side of parent, then the parent node.
-        - InOrder: visit left side of parent, then parent, then right side of parent (used commonly in bst as we can get nodes values in ascending order).
+        - PreOrder: visit parent -> left side of parent -> right side (can be used if we are trying to duplicate/clone a tree as its easily reconstructed).
+        - PostOrder: visit left side -> right side ->  parent node.
+        - InOrder: visit left -> parent -> right side of parent (used commonly in bst as we can get nodes values in ascending order).
 
     - BFS vs DFS ->
         - Depends on Tree
@@ -124,7 +124,8 @@ Big O ->
     - Used to implement Priorty Queues
     - Each node can have at most 2 children
     - The left child comes before the right child
-        - Max Binary Heap : Like BST but parent nodes are always larger than child nodes.
-        - Min Binary Heap : Like BST but parent nodes are always smaller than child nodes.
+        - Max Binary Heap : Like BST but parent nodes > child nodes.
+        - Min Binary Heap : Like BST but parent nodes < child nodes.
         - Find parent of a child node -> (n-1)/2
         - Find left and right child of parent node -> 2n+1, 2n+2
+        - Remove : In case of max BH, maximum node is removed, and in min BH, min node is removed.
