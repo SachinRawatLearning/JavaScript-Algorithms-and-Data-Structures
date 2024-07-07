@@ -89,43 +89,42 @@ Big O ->
 - Searching : O(n)
 - Access : O(n)
 
-
 5. Tree ->
 
 - Binary Tree ->
-    - Each node can have at most two children
 
-        - Binary Search Tree (BST) ->
-            - Sorted in a particular way(order)
-            Like :
-            - Every item on left of root is less than root
-            - Every item on right of root is greater than root
-            - Can repeat that on each child node
+  - Each node can have at most two children
 
+    - Binary Search Tree (BST) ->
+      - Sorted in a particular way(order)
+        Like :
+      - Every item on left of root is less than root
+      - Every item on right of root is greater than root
+      - Can repeat that on each child node
 
 6. Tree Traversal ->
 
-    - BFS
-    - DFS
-        - PreOrder: visit parent -> left side of parent -> right side (can be used if we are trying to duplicate/clone a tree as its easily reconstructed).
-        - PostOrder: visit left side -> right side ->  parent node.
-        - InOrder: visit left -> parent -> right side of parent (used commonly in bst as we can get nodes values in ascending order).
+   - BFS
+   - DFS
 
-    - BFS vs DFS ->
-        - Depends on Tree
-            - Generally, time complexity remains same in both case, as each node is visited once.
-            - If tree is wide (lot of nodes), then DFS is preferred, as space we take up in process will be less in DFS.
-            - If tree is one sided (like each node on right or left side), then BFS is preferred, as space taken will be less and depth will be more.
+     - PreOrder: visit parent -> left side of parent -> right side (can be used if we are trying to duplicate/clone a tree as its easily reconstructed).
+     - PostOrder: visit left side -> right side -> parent node.
+     - InOrder: visit left -> parent -> right side of parent (used commonly in bst as we can get nodes values in ascending order).
 
+   - BFS vs DFS ->
+     - Depends on Tree
+       - Generally, time complexity remains same in both case, as each node is visited once.
+       - If tree is wide (lot of nodes), then DFS is preferred, as space we take up in process will be less in DFS.
+       - If tree is one sided (like each node on right or left side), then BFS is preferred, as space taken will be less and depth will be more.
 
 7. Binary Heaps ->
 
-    - Another Category of Trees
-    - Used to implement Priorty Queues
-    - Each node can have at most 2 children
-    - The left child comes before the right child
-        - Max Binary Heap : Like BST but parent nodes > child nodes.
-        - Min Binary Heap : Like BST but parent nodes < child nodes.
-        - Find parent of a child node -> (n-1)/2
-        - Find left and right child of parent node -> 2n+1, 2n+2
-        - Remove : In case of max BH, maximum node is removed, and in min BH, min node is removed.
+   - Another Category of Trees
+   - Used to implement Priorty Queues
+   - Each node can have at most 2 children
+   - The left child comes before the right child
+     - Max Binary Heap : Like BST but parent nodes > child nodes.
+     - Min Binary Heap : Like BST but parent nodes < child nodes.
+     - Find parent of a child node -> (n-1)/2
+     - Find left and right child of parent node -> 2n+1, 2n+2
+     - Remove : In case of max BH, maximum node is removed, and in min BH, min node is removed.
