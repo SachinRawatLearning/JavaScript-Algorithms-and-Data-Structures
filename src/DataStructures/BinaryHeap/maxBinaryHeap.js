@@ -15,7 +15,7 @@ class Binaryheap {
     let parent = Math.floor((index - 1) / 2);
 
     while (this.values[parent] < this.values[index] && parent >= 0) {
-      temp = this.values[index];
+      let temp = this.values[index];
       this.values[index] = this.values[parent];
       this.values[parent] = temp;
 
@@ -31,7 +31,7 @@ class Binaryheap {
     this.values[0] = this.values[this.values.length - 1];
     this.values.pop();
 
-    this.sinkDown();
+    if (this.values.length > 0) this.sinkDown();
 
     return max;
   }
@@ -39,9 +39,9 @@ class Binaryheap {
   sinkDown() {
     let eleIndex = 0;
     const length = this.values.length;
-    let ele = this.values[eleIndex];
 
     while (true) {
+      let ele = this.values[eleIndex];
       let leftChildIndex = 2 * eleIndex + 1;
       let rightChildIndex = 2 * eleIndex + 2;
       let leftChild, rightChild;
@@ -49,18 +49,31 @@ class Binaryheap {
 
       if (leftChildIndex < length) {
         leftChild = this.values[leftChildIndex];
-        if (leftChild > ele) {
-          swap = leftChild;
-        }
+        //If Left child is greater than the parent
+        if (leftChild > ele) swap = leftChildIndex;
+      }
+
+      if (rightChildIndex < length) {
+        rightChild = this.values[rightChildIndex];
+        //If Right child is greater than the parent or if Both left and right are greater and right is greater than left too
+        if ((!swap && rightChild > ele) || (swap && rightChild > leftChild))
+          swap = rightChildIndex;
       }
 
       if (!swap) break;
+
+      this.values[eleIndex] = this.values[swap];
+      this.values[swap] = ele;
+
+      eleIndex = swap;
     }
   }
 
   print() {
     for (let ele of this.values) {
-      console.log(ele); //55,45,41,39,27,33,1,18
+      console.log(ele);
+      //45,39,33,18,27,12
+      //39,27,33,18,12
     }
   }
 }
@@ -72,6 +85,8 @@ bh.insert(33);
 bh.insert(18);
 bh.insert(27);
 bh.insert(55);
-bh.insert(1);
-bh.insert(45);
+bh.insert(12);
+console.log(bh.extractMax()); //55
+bh.print();
+console.log(bh.extractMax()); //41
 bh.print();
