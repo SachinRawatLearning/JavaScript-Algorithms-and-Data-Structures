@@ -120,7 +120,6 @@ Big O ->
 7. Binary Heaps ->
 
    - Another Category of Trees
-   - Used to implement Priorty Queues
    - Each node can have at most 2 children
    - The left child comes before the right child
      - Max Binary Heap : Like BST but parent nodes > child nodes.
@@ -128,3 +127,6 @@ Big O ->
      - Find parent of a child node -> (n-1)/2
      - Find left and right child of parent node -> 2n+1, 2n+2
      - Remove : In case of max BH, maximum node is removed, and in min BH, min node is removed.
+   - Used to implement Priorty Queues
+     - Priorty Queue -> A data strcture where each element has a priorty. Elements with higher priorty are    served before elements with lower priorty.
+     - Ex.: Processes running in an operating system.
