@@ -130,3 +130,8 @@ Big O ->
    - Used to implement Priorty Queues
      - Priorty Queue -> A data strcture where each element has a priorty. Elements with higher priorty are    served before elements with lower priorty.
      - Ex.: Processes running in an operating system.
+
+   - Big O of Binary Heaps:
+    - Insertion -> O(log N)
+    - Removal -> O(log N)
+    - Search -> O(N)
