@@ -135,3 +135,18 @@ Big O ->
     - Insertion -> O(log N)
     - Removal -> O(log N)
     - Search -> O(N)
+
+8. Hash Tables/ Hash Map -> 
+
+  - Built-in in as a default type in every programming language(like array).
+  - Use to store key-value pairs(keys are not ordered and not strictly numeric).
+  - Fast for all of following : 
+    - Finding values
+    - Adding new values
+    - Removing values
+
+  - Js have Object(same idea but keys are only strings) and Maps.
+  - Hash Functions ->
+    - Convert keys into valid arrayIndices/someNumber.
+    - Used in Cryptography.
+  
