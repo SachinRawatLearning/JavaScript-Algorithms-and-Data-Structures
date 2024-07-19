@@ -150,3 +150,6 @@ Big O ->
     - Convert keys into valid arrayIndices/someNumber.
     - Used in Cryptography.
   
+  - The Hash table length -> its good to always make it prime(decreases number of collisions).
+    - Hash Collision is a random match in hash values that occurs when a hashing algorithm produces the same hash value for two distinct pieces of data
+  
