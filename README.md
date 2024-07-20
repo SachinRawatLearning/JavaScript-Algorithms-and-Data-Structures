@@ -152,4 +152,6 @@ Big O ->
   
   - The Hash table length -> its good to always make it prime(decreases number of collisions).
     - Hash Collision is a random match in hash values that occurs when a hashing algorithm produces the same hash value for two distinct pieces of data
-  
+      - Strategies to avoid collision ->
+        - Separate Chaining -> We store the pieces of data at same spot using another nested data structure.
+        - Linear Probing -> We serch thorugh array to find next empty slot and store there.
