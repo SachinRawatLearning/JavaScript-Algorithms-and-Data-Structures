@@ -155,3 +155,8 @@ Big O ->
       - Strategies to avoid collision ->
         - Separate Chaining -> We store the pieces of data at same spot using another nested data structure.
         - Linear Probing -> We serch thorugh array to find next empty slot and store there.
+
+   - Big O of Hash Tables(Depends on Hash Function) :
+    - Insertion -> O(1)
+    - Deletion -> O(1)
+    - Access -> O(1)

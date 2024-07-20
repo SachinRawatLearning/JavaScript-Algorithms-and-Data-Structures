@@ -26,12 +26,36 @@ class HashTable {
   _get(key) {
     const arrIndex = this._hash(key);
 
-    if (!this.keyMap[arrIndex]) return undefined;
-
-    for (let i = 0; i < this.keyMap[arrIndex].length; i++) {
-      if (this.keyMap[arrIndex][i][0] === key)
-        return this.keyMap[arrIndex][i][1];
+    if (this.keyMap[arrIndex]) {
+      for (const element of this.keyMap[arrIndex]) {
+        if (element[0] === key) return element[1];
+      }
     }
+    return undefined;
+  }
+
+  _keys() {
+    const keys = [];
+    for (const elements of this.keyMap) {
+      if (elements) {
+        for (const item of elements) {
+          if (!keys.includes(item[0])) keys.push(item[0]);
+        }
+      }
+    }
+    console.log(keys);
+  }
+
+  _values() {
+    const values = [];
+    for (const elements of this.keyMap) {
+      if (elements) {
+        for (const item of elements) {
+          if (!values.includes(item[1])) values.push(item[1]);
+        }
+      }
+    }
+    console.log(values);
   }
 
   _print() {
@@ -46,4 +70,7 @@ ht._set("salmon", "#FA8072");
 ht._set("lightcoral", "#F08080");
 ht._set("mediumvioletred", "#C71585");
 ht._set("plum", "#DDA0DD");
-console.log(ht._get("yellow"));
+ht._set("plum", "#DDA0DD");
+console.log(ht._get("maroon"));
+ht._keys();
+ht._values();
