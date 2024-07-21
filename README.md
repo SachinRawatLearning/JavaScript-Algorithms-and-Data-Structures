@@ -160,3 +160,13 @@ Big O ->
     - Insertion -> O(1)
     - Deletion -> O(1)
     - Access -> O(1)
+
+9. Graphs ->
+    - Graph is a collection of nodes and connection between those nodes( Nodes + Connections ).
+    - Uses : 
+      - Social Networks
+      - Location/Mapping
+      - Routing Algorithms
+      - Recommendations(Youtube, Facebook, etc.)
+    
+    
