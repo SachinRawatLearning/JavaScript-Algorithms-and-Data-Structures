@@ -169,4 +169,6 @@ Big O ->
       - Routing Algorithms
       - Recommendations(Youtube, Facebook, etc.)
     
-    
+    - Can use following to represent edges and vertices in graph->
+      - Adjacency Matrix (Better to use if there is a lot of connections)
+      - Adjacency List (Better to use if data is sparser i.e. less connections)
