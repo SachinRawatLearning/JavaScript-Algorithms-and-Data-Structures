@@ -172,3 +172,12 @@ Big O ->
     - Can use following to represent edges and vertices in graph->
       - Adjacency Matrix (Better to use if there is a lot of connections)
       - Adjacency List (Better to use if data is sparser i.e. less connections)
+
+10. Graph Traversal ->
+  - Graph Traversal Uses ->
+    - Web crawlers
+    - Finding closest (Recommendations)
+    - Shortest path problems
+      - GPS Navigation
+      - Solving puzzles
+      - AI (shortest path to win the game)
