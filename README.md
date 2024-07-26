@@ -181,3 +181,7 @@ Big O ->
       - GPS Navigation
       - Solving puzzles
       - AI (shortest path to win the game)
+
+  - Two ways to traverse Graphs ->
+    - Depth First Graph Traversal
+    - Breadth First Graph Traversal
