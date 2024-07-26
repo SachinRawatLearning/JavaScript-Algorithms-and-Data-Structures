@@ -12,6 +12,28 @@ class Graph {
     this.adjacencyList[vertex2].push(vertex1);
   }
 
+  _dfs(startingVertex) {
+    const resultArray = [];
+    const visited = {};
+
+    const helperFn = (vertex) => {
+      //Base Condition
+      if (!vertex) return;
+
+      //Push into result array and mark it as true in visited object
+      resultArray.push(vertex);
+      visited[vertex] = true;
+
+      //Recursively call helper function with the neighbours of vertex
+      for (let item of this.adjacencyList[vertex]) {
+        if (!visited[item]) return helperFn(item);
+      }
+    };
+
+    helperFn(startingVertex);
+    return resultArray;
+  }
+
   _print() {
     for (let [ele, values] of Object.entries(this.adjacencyList))
       console.log(ele, values);
@@ -34,7 +56,19 @@ gh._addEdge("D", "E");
 gh._addEdge("D", "F");
 gh._addEdge("E", "F");
 
-gh._print();
+console.log(gh._dfs("A")); // [ 'A', 'B', 'D', 'E', 'C', 'F' ]
+
+/*
+          A
+       /     \
+      B       C  
+      |       |  
+      D  ---  E
+      \      /
+          F
+  */
+
+// gh._print();
 /*
   {
       [ 'A', [ 'B', 'C' ] ],
