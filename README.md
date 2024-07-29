@@ -185,3 +185,4 @@ Big O ->
   - Two ways to traverse Graphs ->
     - Depth First Graph Traversal
     - Breadth First Graph Traversal
+    - Both can be done recursively or iteratively.
