@@ -186,3 +186,8 @@ Big O ->
     - Depth First Graph Traversal
     - Breadth First Graph Traversal
     - Both can be done recursively or iteratively.
+
+11. Dijkstra's Algorithm
+    - Acts upon a graph
+    - Uses priority queue
+    - Find Shortest path between two vertices on a graph
