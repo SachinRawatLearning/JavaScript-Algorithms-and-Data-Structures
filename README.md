@@ -191,3 +191,8 @@ Big O ->
     - Acts upon a graph
     - Uses priority queue
     - Find Shortest path between two vertices on a graph
+    - Uses:
+      - GPS - finding fastest route
+      - Network Routing - finds open shortest path for data
+      - Biology - used to model the spread of viruses among humans
+      - Airline tickets - finding cheapest route to destination, etc.
