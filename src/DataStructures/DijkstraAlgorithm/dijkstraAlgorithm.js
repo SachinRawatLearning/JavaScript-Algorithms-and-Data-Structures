@@ -33,6 +33,7 @@ class WeightedGraph {
     const nodes = new PriortyQueue();
     const distances = {}; // distance from start
     const previous = {}; // previous visited vertex
+    const path = []; // path to return at end
     let smallest;
 
     //Build up initial distances and priorties
@@ -48,11 +49,35 @@ class WeightedGraph {
     }
 
     while (nodes.values.length) {
-      smallest = nodes.dequeue();
-      if (smallest.element === end) return;
+      smallest = nodes.dequeue().element;
+      if (smallest === end) {
+        //Build up Path to return
+        while (previous[smallest]) {
+          path.push(smallest);
+          smallest = previous[smallest];
+        }
+        break;
+      }
 
-      this._adjacencyList[smallest].forEach((neighbor) => {});
+      if (smallest || distances[smallest] !== Infinity) {
+        this._adjacencyList[smallest].forEach((neighbor) => {
+          //   console.log(neighbor);
+
+          //Calculate new distance to neighboring node
+          let candidate = distances[smallest] + neighbor.weight;
+          if (candidate < distances[neighbor.node]) {
+            //Updating new smallest distance to neighbor
+            distances[neighbor.node] = candidate;
+            //Updating previous - How we got to neighbor
+            previous[neighbor.node] = smallest;
+            //Enqueue in priorty queue with new priorty
+            nodes.enqueue(neighbor.node, candidate);
+          }
+        });
+      }
     }
+
+    return path.concat(smallest).reverse();
   }
 }
 
@@ -74,5 +99,18 @@ graph._addEdge("D", "F", 1);
 graph._addEdge("E", "F", 1);
 
 //Graph:
-console.log(graph);
-graph._dijstra("A", "E");
+
+/* 
+            A
+           /  \ 4
+      2  /     B 
+        / 2   3 \ 3
+       C --D -- E
+       \   | 1 /
+      4 \  |  / 1
+           F
+*/
+
+// console.log(graph);
+console.log(graph._dijstra("A", "E")); //[ 'A', 'C', 'D', 'F', 'E' ]
+console.log(graph._dijstra("A", "F")); //[ 'A', 'C', 'D', 'F' ]
