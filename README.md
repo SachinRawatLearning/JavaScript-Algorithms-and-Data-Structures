@@ -196,3 +196,8 @@ Big O ->
       - Network Routing - finds open shortest path for data
       - Biology - used to model the spread of viruses among humans
       - Airline tickets - finding cheapest route to destination, etc.
+
+12. Dynamic Programming
+    - A method for solving a complex problem by breaking it down into collection of subproblems,
+      solving each of subproblems just once, and storing their solutions.
+    - Dynamic Programming basically means coming with an optimal solution
