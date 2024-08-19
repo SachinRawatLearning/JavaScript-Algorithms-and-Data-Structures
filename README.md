@@ -208,3 +208,5 @@ Big O ->
       - Overlapping (Repitition) Subproblems - we can break one problem down into small pieces and some of those pieces are reused again. Example -> Fibonacci Sequence. No overlapping subproblem example -> Merge Sort (divide and conquer method).
 
     - Memoization -> Storing the results of expensive function calls and returning cached result when same input occurs again.
+
+    - Tabulation (Bottom Up Approach) -> Storing the result of a previous result in a table(usually an array). Usually done using iteration. Better space complexity can be achieved using tabulation.
