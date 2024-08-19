@@ -206,3 +206,5 @@ Big O ->
       - Optimal Substructure - If the optimal solution of a bigger problem can be constructed from optimal solutions of its subproblems. Example -> Fiboncci Sequence, Shortest path
       
       - Overlapping (Repitition) Subproblems - we can break one problem down into small pieces and some of those pieces are reused again. Example -> Fibonacci Sequence. No overlapping subproblem example -> Merge Sort (divide and conquer method).
+
+    - Memoization -> Storing the results of expensive function calls and returning cached result when same input occurs again.
