@@ -200,4 +200,9 @@ Big O ->
 12. Dynamic Programming
     - A method for solving a complex problem by breaking it down into collection of subproblems,
       solving each of subproblems just once, and storing their solutions.
-    - Dynamic Programming basically means coming with an optimal solution
+    - Dynamic Programming basically means coming with an optimal solution.
+    - Only works on Problems with :
+      
+      - Optimal Substructure - If the optimal solution of a bigger problem can be constructed from optimal solutions of its subproblems. Example -> Fiboncci Sequence, Shortest path
+      
+      - Overlapping (Repitition) Subproblems - we can break one problem down into small pieces and some of those pieces are reused again. Example -> Fibonacci Sequence. No overlapping subproblem example -> Merge Sort (divide and conquer method).
